@@ -1,0 +1,35 @@
+[hitcounter] "GET /hit?job=shared HTTP/1.1" 200 -
+[hitcounter] hit job=shared count=1
+[2026-11-08T18:36:06.263424Z] query on engineA exit=0 elapsed=3.37s
+[2026-11-08T18:36:06.263533Z] STAGE A: PASS out='cache-result-shared' counter=1 elapsed=3.37s
+[2026-11-08T18:36:07.318991Z] Published=7 (quiescent)
+[2026-11-08T18:36:07.319022Z] stopping dcache-ft-1794162961369-e6dc10engineA (SIGTERM, timeout 30)
+[2026-11-08T18:36:13.061378Z] discarded engine dcache-ft-1794162961369-e6dc10engineA (inspect exit=1 proves absent)
+[2026-11-08T18:36:13.662501Z] warm merge observed: merges=1 (baseline=0)
+[2026-11-08T18:36:13.798711Z] query on engineB exit=0 elapsed=0.13s
+[2026-11-08T18:36:13.798881Z] STAGE B: PASS out='cache-result-shared' counter=1 elapsed=0.13s
+[2026-11-08T18:36:13.897935Z] query on engineB exit=0 elapsed=0.09s
+[2026-11-08T18:36:13.898043Z] STAGE C: PASS out='cache-result-shared' counter=1 elapsed=0.09s
+[2026-11-08T18:36:14.533591Z] stopping dcache-ft-1794162961369-e6dc10engineB (SIGTERM, timeout 30)
+[2026-11-08T18:36:18.164613Z] discarded engine dcache-ft-1794162961369-e6dc10engineB (inspect exit=1 proves absent)
+[2026-11-08T18:36:18.164681Z] stopping dcache-ft-1794162961369-e6dc10coord (SIGTERM, timeout 30)
+[2026-11-08T18:36:19.541570Z] query on engineD exit=0 elapsed=0.11s
+[2026-11-08T18:36:19.541690Z] STAGE D: PASS out='cache-result-shared' counter=1 elapsed=0.11s
+[2026-11-08T18:36:20.183786Z] stopping dcache-ft-1794162961369-e6dc10engineD (SIGTERM, timeout 30)
+[2026-11-08T18:36:24.612348Z] discarded engine dcache-ft-1794162961369-e6dc10engineD (inspect exit=1 proves absent)
+[2026-11-08T18:36:24.688255Z] STAGE S3-delete: PASS deleted 5 keys, remaining=0
+[hitcounter] "GET /hit?job=shared HTTP/1.1" 200 -
+[hitcounter] hit job=shared count=2
+[2026-11-08T18:36:26.778558Z] query on engineE exit=0 elapsed=1.55s
+[2026-11-08T18:36:26.778674Z] STAGE S3-fallback: PASS out='cache-result-shared' counter=2 elapsed=1.55s
+[2026-11-08T18:36:27.415160Z] stopping dcache-ft-1794162961369-e6dc10engineE (SIGTERM, timeout 30)
+[2026-11-08T18:36:31.286198Z] discarded engine dcache-ft-1794162961369-e6dc10engineE (inspect exit=1 proves absent)
+[2026-11-08T18:36:31.309619Z] corrupted 4 fixture-bucket keys
+[hitcounter] "GET /hit?job=shared HTTP/1.1" 200 -
+[hitcounter] hit job=shared count=3
+[2026-11-08T18:36:33.295230Z] query on engineF exit=0 elapsed=1.54s
+[2026-11-08T18:36:33.295359Z] STAGE S3-corrupt-fallback: PASS out='cache-result-shared' counter=3 elapsed=1.54s
+[2026-11-08T18:36:33.318640Z] teardown: removing and verifying only owned Docker resources
+[2026-11-08T18:36:35.749014Z] state dir retained: [Errno 13] Permission denied: 'xl.meta'
+[2026-11-08T18:36:35.749049Z] teardown complete: Docker resource absence verified
+[2026-11-08T18:36:35.749353Z] results written to /data/dcache-dev/artifacts/release-functional/dcache-ft-1794162961369-e6dc10.json

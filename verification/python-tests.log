@@ -1,0 +1,69 @@
+test_build_hit_query_uses_shell_command (test_byteplane.ByteplaneTests.test_build_hit_query_uses_shell_command) ... ok
+test_extract_stdout_from_nested_contents (test_byteplane.ByteplaneTests.test_extract_stdout_from_nested_contents) ... ok
+test_read_nonce_keeps_producer_args_and_selects_consumer_file (test_byteplane.ByteplaneTests.test_read_nonce_keeps_producer_args_and_selects_consumer_file) ... ok
+test_named_volumes_are_removed_and_absence_checked (test_cleanup.CleanupVerification.test_named_volumes_are_removed_and_absence_checked) ... ok
+test_nonzero_removal_fails_cleanup (test_cleanup.CleanupVerification.test_nonzero_removal_fails_cleanup) ... ok
+test_readback_that_still_exists_fails_cleanup (test_cleanup.CleanupVerification.test_readback_that_still_exists_fails_cleanup) ... ok
+test_run_reports_cleanup_failure_before_results (test_cleanup.CleanupVerification.test_run_reports_cleanup_failure_before_results) ... ok
+test_all_scenario_corrupts_then_uses_fresh_consumer (test_corrupt_scenario.CorruptionScenario.test_all_scenario_corrupts_then_uses_fresh_consumer) ... ok
+test_fixture_gc_thresholds_are_explicit_and_bounded (test_fixture_gc.EngineFixtureGC.test_fixture_gc_thresholds_are_explicit_and_bounded) ... ok
+test_real_query_uses_digest_addressed_image (test_image_pin.TestImmutableWorkload.test_real_query_uses_digest_addressed_image) ... ok
+test_empty_get_sends_signed_content_type (test_image_pin.TestS3SignedHeaders.test_empty_get_sends_signed_content_type) ... /Users/snoby/dagger-cache/dcache/tests/functional/run.py:301: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  t = datetime.datetime.utcnow()
+ok
+test_cli_supplies_harness_scenario (test_mixed_load.MixedLoadHelpers.test_cli_supplies_harness_scenario) ... ok
+test_job_plan_has_shared_and_unique_work (test_mixed_load.MixedLoadHelpers.test_job_plan_has_shared_and_unique_work) ... ok
+test_memory_guard_accounts_for_engines_and_headroom (test_mixed_load.MixedLoadHelpers.test_memory_guard_accounts_for_engines_and_headroom) ... ok
+test_overlap_is_measured_from_real_query_intervals (test_mixed_load.MixedLoadHelpers.test_overlap_is_measured_from_real_query_intervals) ... ok
+test_result_checker_rejects_recompute_missing_and_duplicates (test_mixed_load.MixedLoadHelpers.test_result_checker_rejects_recompute_missing_and_duplicates) ... ok
+test_publication_waits_for_idle_and_stable_counter (test_readiness.ReadinessTests.test_publication_waits_for_idle_and_stable_counter) ... ok
+test_warm_merge_requires_a_new_completed_merge (test_readiness.ReadinessTests.test_warm_merge_requires_a_new_completed_merge) ... ok
+test_no_server_argument (test_run.TestCoordinatorEntrypoint.test_no_server_argument) ... ok
+test_exit_nonzero_when_scenario_false_despite_passing_stages (test_run.TestEvidenceAndExitCode.test_exit_nonzero_when_scenario_false_despite_passing_stages) ... /Users/snoby/dagger-cache/dcache/tests/functional/run.py:414: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  line = "[%s] %s" % (datetime.datetime.utcnow().isoformat() + "Z", msg)
+[2026-11-08T18:36:00.355744Z] STAGE A: PASS 
+ok
+test_exit_zero_when_scenario_true (test_run.TestEvidenceAndExitCode.test_exit_zero_when_scenario_true) ... [2026-11-08T18:36:00.355930Z] STAGE A: PASS 
+ok
+test_run_captures_logs_before_writing_results (test_run.TestEvidenceAndExitCode.test_run_captures_logs_before_writing_results) ... [2026-11-08T18:36:00.356079Z] ACCEPTANCE FAILED: []
+ok
+test_cloud_token_equals_coordinator_token (test_run.TestFixtureTokens.test_cloud_token_equals_coordinator_token) ... ok
+test_cloud_token_is_fixture_value (test_run.TestFixtureTokens.test_cloud_token_is_fixture_value) ... ok
+test_cleanup_never_global_prune (test_run.TestNameOwnership.test_cleanup_never_global_prune) ... ok
+test_cleanup_only_touches_owned_names (test_run.TestNameOwnership.test_cleanup_only_touches_owned_names) ... ok
+test_no_arbitrary_filesystem_deletion (test_run.TestNameOwnership.test_no_arbitrary_filesystem_deletion) ... ok
+test_owned_names_carry_prefix (test_run.TestNameOwnership.test_owned_names_carry_prefix) ... ok
+test_prefix_is_unique_and_stable_per_run (test_run.TestNameOwnership.test_prefix_is_unique_and_stable_per_run) ... ok
+test_unowned_names_rejected (test_run.TestNameOwnership.test_unowned_names_rejected) ... ok
+test_no_debug_peers_endpoint (test_run.TestPeerRegistration.test_no_debug_peers_endpoint) ... ok
+test_peers_count_variants (test_run.TestPeerRegistration.test_peers_count_variants) ... ok
+test_registration_timeout_raises (test_run.TestPeerRegistration.test_registration_timeout_raises) ... ok
+test_wait_for_peer_registration_uses_debug_state (test_run.TestPeerRegistration.test_wait_for_peer_registration_uses_debug_state) ... ok
+test_exec_command_present (test_run.TestQueryBuilding.test_exec_command_present) ... ok
+test_query_escapes_newlines (test_run.TestQueryBuilding.test_query_escapes_newlines) ... ok
+test_query_escapes_quotes_and_backslashes (test_run.TestQueryBuilding.test_query_escapes_quotes_and_backslashes) ... ok
+test_query_shape (test_run.TestQueryBuilding.test_query_shape) ... ok
+test_no_operation_flag (test_run.TestRunQueryStdin.test_no_operation_flag) ... [2026-11-08T18:36:00.868509Z] query on engineA exit=0 elapsed=0.00s
+ok
+test_query_passed_via_stdin_not_positional (test_run.TestRunQueryStdin.test_query_passed_via_stdin_not_positional) ... [2026-11-08T18:36:00.868759Z] query on engineA exit=0 elapsed=0.00s
+ok
+test_stdin_payload_is_the_built_query (test_run.TestRunQueryStdin.test_stdin_payload_is_the_built_query) ... [2026-11-08T18:36:00.868983Z] query on engineA exit=0 elapsed=0.00s
+ok
+test_bucket_env_unchanged (test_run.TestS3ProviderRustfs.test_bucket_env_unchanged) ... [2026-11-08T18:36:00.870943Z] engine image inspect failed: Expecting value: line 1 column 1 (char 0)
+ok
+test_no_minio_image (test_run.TestS3ProviderRustfs.test_no_minio_image) ... [2026-11-08T18:36:00.872208Z] engine image inspect failed: Expecting value: line 1 column 1 (char 0)
+ok
+test_provider_evidence_and_health (test_run.TestS3ProviderRustfs.test_provider_evidence_and_health) ... [2026-11-08T18:36:00.873427Z] engine image inspect failed: Expecting value: line 1 column 1 (char 0)
+ok
+test_rustfs_env_user_and_empty_args (test_run.TestS3ProviderRustfs.test_rustfs_env_user_and_empty_args) ... [2026-11-08T18:36:00.874663Z] engine image inspect failed: Expecting value: line 1 column 1 (char 0)
+ok
+test_rustfs_image_digest_pinned (test_run.TestS3ProviderRustfs.test_rustfs_image_digest_pinned) ... [2026-11-08T18:36:00.875374Z] engine image inspect failed: Expecting value: line 1 column 1 (char 0)
+ok
+test_parse_after_progress_lines (test_run.TestStdoutParse.test_parse_after_progress_lines) ... ok
+test_parse_plain_json (test_run.TestStdoutParse.test_parse_plain_json) ... ok
+test_workload_image_is_immutable (test_workload_pin.WorkloadPinTests.test_workload_image_is_immutable) ... ok
+
+----------------------------------------------------------------------
+Ran 49 tests in 0.677s
+
+OK

@@ -1,0 +1,13 @@
+.upstream/
+agents/
+artifacts/
+bin/
+*.db
+*.db-shm
+*.db-wal
+.env
+__pycache__/
+# Local development runners are not part of the published service.
+scripts/local_agent.py
+scripts/local_patch.py
+scripts/test-remote.sh

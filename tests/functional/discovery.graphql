@@ -1,0 +1,1 @@
+query { container { from(address: "alpine:3.23") { withExec(args: ["sh", "-c", "sleep 2; printf dcache-discovery-proof"]) { stdout } } } }

@@ -1,0 +1,19 @@
+[hitcounter] "GET /hit?job=shared HTTP/1.1" 200 -
+[hitcounter] hit job=shared count=1
+[2026-11-08T18:36:15.671881Z] query on producer exit=0 elapsed=4.29s
+[2026-11-08T18:36:16.722955Z] stopping dcache-ft-1794162969703-df8c13producer (SIGTERM, timeout 30)
+[2026-11-08T18:36:20.959189Z] discarded engine dcache-ft-1794162969703-df8c13producer (inspect exit=1 proves absent)
+[hitcounter] "GET /hit?job=unique-0 HTTP/1.1" 200 -
+[hitcounter] hit job=unique-0 count=1
+[2026-11-08T18:36:24.609554Z] query on worker0 exit=0 elapsed=0.59s
+[hitcounter] "GET /hit?job=unique-1 HTTP/1.1" 200 -
+[hitcounter] hit job=unique-1 count=1
+[2026-11-08T18:36:24.664956Z] query on worker1 exit=0 elapsed=0.65s
+[2026-11-08T18:36:24.692118Z] query on worker2 exit=0 elapsed=0.68s
+[hitcounter] "GET /hit?job=unique-2 HTTP/1.1" 200 -
+[hitcounter] hit job=unique-2 count=1
+[2026-11-08T18:36:24.962465Z] query on worker3 exit=0 elapsed=0.95s
+[2026-11-08T18:36:25.023939Z] teardown: removing and verifying only owned Docker resources
+[2026-11-08T18:36:27.363624Z] state dir retained: [Errno 13] Permission denied: 'cache.db-wal'
+[2026-11-08T18:36:27.363655Z] teardown complete: Docker resource absence verified
+[2026-11-08T18:36:27.364001Z] results written to /data/dcache-dev/artifacts/release-mixed4/dcache-ft-1794162969703-df8c13.json

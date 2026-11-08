@@ -1,0 +1,5 @@
+ok  	github.com/snoby/dcache/internal/telemetry	0.021s
+=== RUN   TestRealS3RoundTrip
+--- PASS: TestRealS3RoundTrip (0.06s)
+PASS
+ok  	github.com/snoby/dcache/internal/storage	0.062s

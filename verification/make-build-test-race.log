@@ -1,0 +1,25 @@
+go version go1.27.3 linux/amd64
+sh scripts/bootstrap.sh
+Pinned Dagger source verified: a45241b20a5e07fbfc5954479ef0b61da843499c
+mkdir -p bin
+GOMAXPROCS=4 go build -p 2 -o bin/dcache ./cmd/dcache
+sh scripts/bootstrap.sh
+Pinned Dagger source verified: a45241b20a5e07fbfc5954479ef0b61da843499c
+GOMAXPROCS=4 go test -p 2 -count=1 ./...
+ok  	github.com/snoby/dcache/cmd/dcache	0.020s
+ok  	github.com/snoby/dcache/internal/graph	0.050s
+ok  	github.com/snoby/dcache/internal/peer	0.420s
+ok  	github.com/snoby/dcache/internal/renewal	0.001s
+ok  	github.com/snoby/dcache/internal/server	0.371s
+ok  	github.com/snoby/dcache/internal/storage	0.005s
+ok  	github.com/snoby/dcache/internal/telemetry	0.005s
+sh scripts/bootstrap.sh
+Pinned Dagger source verified: a45241b20a5e07fbfc5954479ef0b61da843499c
+GOMAXPROCS=4 go test -race -p 2 -count=1 ./...
+ok  	github.com/snoby/dcache/cmd/dcache	1.088s
+ok  	github.com/snoby/dcache/internal/graph	1.181s
+ok  	github.com/snoby/dcache/internal/peer	1.554s
+ok  	github.com/snoby/dcache/internal/renewal	1.007s
+ok  	github.com/snoby/dcache/internal/server	4.697s
+ok  	github.com/snoby/dcache/internal/storage	1.019s
+ok  	github.com/snoby/dcache/internal/telemetry	1.021s
