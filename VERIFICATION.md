@@ -60,3 +60,11 @@ Both final harness runs checked Docker removal statuses and exact-name absence f
 - Native macOS builds are unsupported by imported Linux engine libraries. S3 compatibility was exercised against RustFS, not every S3 provider.
 
 Build/run instructions and all required configuration are in `README.md`. The tested Linux binary is at `ethpow:/data/dcache-dev/service/bin/dcache`; source is retained in this project and the downloadable source archive.
+
+## Documentation-completeness follow-up
+
+The [documentation index](docs/README.md) now links the implemented design, dedicated S3 and engine integration guides, environment templates, complete test inventory, and all original historical design/research/review records. All 48 original Markdown documents and seven diagnostic files are covered by the historical manifest; private development paths/addresses are replaced with documentation placeholders. Historical proposals are not claimed as implemented features.
+
+All 30 original service test files remain included. One new test file adds three offline documentation regressions; the current Python suite is **52 tests, PASS**, recorded separately in [documentation-tests.log](verification/documentation-tests.log). The original 49-test evidence above is historical and has not been relabeled. No runtime Go code or original tests changed in this follow-up.
+
+The setup audit corrected the README's remote-cache URL to the service **base URL**, since the pinned engine appends `/v1/engine`. It also corrected the access-control description: coordinator `/metrics` is unauthenticated, while `/debug/state` requires the pool token. The S3 guide explicitly documents unconditional bucket initialization and provider limitations, including the AWS `us-east-1` existing-bucket ACL-reset caution. No real AWS deployment, new real-engine run, or 96-client capacity pass is implied by these offline documentation checks.

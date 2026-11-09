@@ -6,6 +6,16 @@ The coordinator imports Dagger's pinned graph/transfer libraries, keeps graph st
 
 **Development prototype.** See `VERIFICATION.md` for execution evidence and remaining limitations; a passing helper test is not cross-engine cache proof.
 
+## Documentation
+
+- [Documentation index](docs/README.md)
+- [Current implemented architecture](docs/design.md)
+- [S3 bucket configuration, permissions and endpoint requirements](docs/s3.md)
+- [Connecting independent engines, CLI sessions and Kubernetes runners](docs/engines.md)
+- [All tests, commands, inventory and evidence](docs/testing.md)
+- [Complete historical design/research/review archive](docs/history/README.md)
+- [Coordinator environment template](examples/coordinator.env.example) and [engine-only template](examples/engine.env.example)
+
 ## Compatibility and prerequisites
 
 - **Linux** build/runtime: imported upstream engine libraries use Linux system calls. Native macOS compilation is not supported by this implementation.
@@ -70,21 +80,18 @@ Verification/publication gets a fresh five-minute context after upload. Renewal 
 
 ## Connect engines and CLI clients
 
-For the pinned engine, configure the following using the same pool token. The address must be reachable from engines and CLI clients; use TLS outside an isolated trusted network.
+For the pinned engine, configure the following using the same pool token. The address must be reachable from engines and CLI clients; use TLS outside an isolated trusted network. Full Docker, CLI/runner and Kubernetes wiring is in [Connecting engines](docs/engines.md).
 
 ```sh
-_EXPERIMENTAL_DAGGER_REMOTE_CACHE_URL=ws://dcache:8080/v1/engine
-DAGGER_CLOUD_URL=http://dcache:8080
-DAGGER_CLOUD_TOKEN=<same value as DCACHE_TOKEN>
-OTEL_EXPORTER_OTLP_ENDPOINT=http://dcache:8080
-OTEL_EXPORTER_OTLP_PROTOCOL=http/protobuf
-OTEL_EXPORTER_OTLP_HEADERS=Authorization=Bearer <same pool token>
-OTEL_EXPORTER_OTLP_TRACES_LIVE=1
+export _EXPERIMENTAL_DAGGER_REMOTE_CACHE_URL=http://dcache:8080
+export DAGGER_CLOUD_URL=http://dcache:8080
+export DAGGER_CLOUD_TOKEN="${DCACHE_TOKEN}"
+export OTEL_EXPORTER_OTLP_TRACES_LIVE=1
 ```
 
-This is environment configuration, not a shell script to source literally: spaces in the header value must be quoted when exporting it. Apply the exporter settings where engine/session telemetry originates, and configure the CLI's Cloud URL/token as well. The remote-cache URL alone does not redirect telemetry.
+Use the **service base URL**: the pinned engine appends `/v1/engine` itself. Configure Cloud URL/token on the engine **and** CLI/runner sessions so discovery telemetry reaches the service. The [engine guide](docs/engines.md) also documents optional explicit OTLP exporter settings, including correctly quoted authentication headers. Do not give engines the coordinator's S3 credentials or HMAC secret.
 
-The service implements `/v1/engine`, OTLP HTTP/protobuf `/v1/traces`, `/v1/logs`, and `/v1/metrics` (metrics payloads are accepted and dropped). `/healthz` is public liveness; `/metrics` and `/debug/state` require `Authorization: Bearer <pool token>`.
+The service implements `/v1/engine`, OTLP HTTP/protobuf `/v1/traces`, `/v1/logs`, and `/v1/metrics` (metrics payloads are accepted and dropped). `/healthz` and the coordinator's `/metrics` scrape route are **unauthenticated**; `/debug/state` requires the pool token (Basic or Bearer). Protect metrics at your private network/proxy boundary if needed; do not assume that supplying an optional header makes that route protected.
 
 ## Real functional tests
 

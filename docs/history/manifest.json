@@ -1,0 +1,392 @@
+{
+  "scope": "All original parent-workspace Markdown designs/research/review baselines plus cache diagnostic probes; excludes separate cppcheck project, credential/config files and agent runtime transcripts.",
+  "authority": "Historical records only; docs/design.md and VERIFICATION.md describe the delivered prototype.",
+  "sanitization": "Private developer paths, personal infrastructure DNS and LAN IPv4 addresses replaced with placeholders or documentation addresses; no original private values are listed.",
+  "files": [
+    {
+      "path": "architect-brief.md",
+      "kind": "historical-design",
+      "original_sha256": "126e6ce371e5c2e8ec8993cd3a592ac0b889c5f93d7a1e35b012052cc4361693",
+      "published_sha256": "9c8f28fbb010901186f51baa25b5b188b7e65e2b8f8e89fb5cee66d82b42315e",
+      "sanitized": true
+    },
+    {
+      "path": "architecture.md",
+      "kind": "historical-design",
+      "original_sha256": "bf33258771bea68bc6f91ff0c65da658752071caf563ea4f2161d3acb2687338",
+      "published_sha256": "1743ef281b682d32ea78396d6f7d3178f8dae415a653d2f0daecfb2c3193a4de",
+      "sanitized": true
+    },
+    {
+      "path": "decision.md",
+      "kind": "historical-design",
+      "original_sha256": "e4a82ec14bfd7cc93230419d6f7cf59f3ee90f418f5fda424f8a5222fe05085e",
+      "published_sha256": "91093f09c83ba28aab907da627b1e5ef681bcaab5434368f06b76476347f0a12",
+      "sanitized": true
+    },
+    {
+      "path": "gate_a.md",
+      "kind": "historical-design",
+      "original_sha256": "d52cf6d7dbd1b7ec1825589234c965696290c9b2bfd4868c3002db394a598b40",
+      "published_sha256": "5cab4857c7a103be21c087fc47c39c9b205fada4012e0d1295dfa14e52f387ab",
+      "sanitized": true
+    },
+    {
+      "path": "harness/README.md",
+      "kind": "historical-design",
+      "original_sha256": "f756c9ab34e704d6ff1949563d364fe73db8717aaf32d920250676442b9e1866",
+      "published_sha256": "1ee170d140c44607c01fa7b44fd8a3621f8d6407d6c557781de0a28bccc9fd35",
+      "sanitized": true
+    },
+    {
+      "path": "latency-and-azure.md",
+      "kind": "historical-design",
+      "original_sha256": "4e11620f4f0f6ac8fd388da0adf36b72916cddc6ea9c497e8bbc5cbd761eb12a",
+      "published_sha256": "b5e3098c0014ee08014192d33074fb3c46f68f83927f1fa726902c5fcfa52885",
+      "sanitized": true
+    },
+    {
+      "path": "ledger.md",
+      "kind": "historical-design",
+      "original_sha256": "e1c4d10214719a15460623bca3a99f2157993462ca4780a6f27ecc2e5147c6a6",
+      "published_sha256": "fd3b64faca99a1cbca449eb5885f80a925a7caedadced376ef8a0a8ae4c65953",
+      "sanitized": true
+    },
+    {
+      "path": "metrics-and-eviction.md",
+      "kind": "historical-design",
+      "original_sha256": "3962509a9804c09bf956f2adae83c7f77fa46c3a7df8ad3aa27cbdbcd6910e20",
+      "published_sha256": "ebfc75b8ad50506cb49815886a705ece6f258eec37465310fbf2bfa979febcb3",
+      "sanitized": true
+    },
+    {
+      "path": "prior-art-followup.md",
+      "kind": "historical-design",
+      "original_sha256": "fb0c98db71a5fecfa83b5950b98dfb16657d5f30a2f9207175bebaa1c7f472f2",
+      "published_sha256": "339894a984ec1ab948e658a1ad674f82c6f54cb1c822280dd8d125ebe01d23f3",
+      "sanitized": true
+    },
+    {
+      "path": "recon-prior-art.md",
+      "kind": "historical-design",
+      "original_sha256": "682796ca48f35db1fb9e770c0125567f00d197ca982326169ef3924de1e30c71",
+      "published_sha256": "4a7477862b7cfc7f9f1054a0fd4489f99e91a5cef26d280ef21f33bf16d6424d",
+      "sanitized": true
+    },
+    {
+      "path": "recon-protocol.md",
+      "kind": "historical-design",
+      "original_sha256": "3f4c36911239a3cd1f346b20481e47a96128bd9feb5ee6a9b53690ee6d0e0143",
+      "published_sha256": "da51e969b6eca36fc0f34e24e58a14c3199e4e66a914e56107451a84eb7d7b7a",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline/architecture.md",
+      "kind": "historical-design",
+      "original_sha256": "f2ec2366dbac58a94759c61f8b4386ea212ed33f0fa22fc155d4cefe6fbac02e",
+      "published_sha256": "d1750f3146b689122da8fa86020b7ae2a7741e3e28dd7a17114ac95482bf09b1",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline/decision.md",
+      "kind": "historical-design",
+      "original_sha256": "122212d686ae986953254f4ca646f41a6e72fcc83d556aa9f427f4b00936718a",
+      "published_sha256": "e16f596bc82290e467287b78334eb087ad42385e4af5ecb005791f1ad573b145",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline/latency-and-azure.md",
+      "kind": "historical-design",
+      "original_sha256": "26be87dd52af512e5216ca78dcaae024387cf60eea91ec9b7ba6091f3b01c080",
+      "published_sha256": "a98faefe030ffdba8546d30b0fabc03ca091e47e4119924258a3c467eba4bbc6",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline/metrics-and-eviction.md",
+      "kind": "historical-design",
+      "original_sha256": "522fa8ac7f401e49e8777c2ebb28779fdb1ce1be60b2987aa576b72159f8d5f8",
+      "published_sha256": "c2d39d3ef035d61622b625c66d65636e3532ff94169c40c7ec25bb6066fadd65",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline-r2/architecture.md",
+      "kind": "historical-design",
+      "original_sha256": "21f21be3f94941e9a7ba7b05ba1b12d4d484cfbb801c13361fdb4ba83d9492f4",
+      "published_sha256": "3b825e303b5353c1017b086660e0e7f6ab9173776022a97c2abb2469e427ca72",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline-r2/decision.md",
+      "kind": "historical-design",
+      "original_sha256": "fc3d269711015f363ff3bff6410dcffd636c3dc93b41064be2c9b8874531ab88",
+      "published_sha256": "5bb80a3b016e3d37ccccccf28525ba8a2f8f206a3ae10c11148c355084138994",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline-r2/latency-and-azure.md",
+      "kind": "historical-design",
+      "original_sha256": "d3a428ef277dac50653eb81a17e8a41a45f622229029e16dc9dff7c6560d0bf7",
+      "published_sha256": "b6eb858ae8726a25aa25115b5bf68db56500884ff7cbcd46794442a1cd7ef4fc",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline-r2/metrics-and-eviction.md",
+      "kind": "historical-design",
+      "original_sha256": "c713ab8c5ad38f59beee91970f43c7997c3f2bc32eb50da2cdf021058be202bb",
+      "published_sha256": "dac73f20d3f39b7e7d269662f042578ea010951d16cad1937abf2ffed83d641c",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline-r2/revision-r1.md",
+      "kind": "historical-design",
+      "original_sha256": "49f3a3ab2664581426eb84facc16180e6c9dcd72d008ca9ed5b4100bad01a3a0",
+      "published_sha256": "d3be3be92c10d028fb54a0ff7e664c951bdd80deff57bf49dee7a15a567960fe",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline-r4/architecture.md",
+      "kind": "historical-design",
+      "original_sha256": "bf33258771bea68bc6f91ff0c65da658752071caf563ea4f2161d3acb2687338",
+      "published_sha256": "facea040f82c2600649fa8a7a76f9ef8b32a02bd285df4b6cd27cef79839e694",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline-r4/decision.md",
+      "kind": "historical-design",
+      "original_sha256": "e4a82ec14bfd7cc93230419d6f7cf59f3ee90f418f5fda424f8a5222fe05085e",
+      "published_sha256": "1ac1e7232e701007e7d1700158794883c0d5c803082e35124701a1e5dc01e3e5",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline-r4/latency-and-azure.md",
+      "kind": "historical-design",
+      "original_sha256": "4e11620f4f0f6ac8fd388da0adf36b72916cddc6ea9c497e8bbc5cbd761eb12a",
+      "published_sha256": "e93581201f6dd764b21df3883288bdf18f8b213274c9901525174b8985a6146d",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline-r4/ledger.md",
+      "kind": "historical-design",
+      "original_sha256": "f6cff8c5176babe21c101bc529150c758eb2719fd7647cb04af192f836144f0f",
+      "published_sha256": "73a5c8156ee9e25f573ad19bb0f06bab6ec34a94268190afd698f057f3e03a76",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline-r4/metrics-and-eviction.md",
+      "kind": "historical-design",
+      "original_sha256": "7a082bb9e2ee1dc60479525ef4f5e2ecceb6312965f019e1972ade4d5616bcd1",
+      "published_sha256": "e7fc45b5fd30cdb9c77f7cc9b87437d68069fa978167dfbf3c1efa7c9afe363a",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline-r4/revision-r3.md",
+      "kind": "historical-design",
+      "original_sha256": "9988b0fa3d25265aa4f772a772bed0f7abce827f5ec2f77019c169dfc182d320",
+      "published_sha256": "df46e008ee9b8191e0acb21c5b89abdf9ee01828808bc04764cbeb2df0440458",
+      "sanitized": true
+    },
+    {
+      "path": "review/baseline-r4/revision-r4.md",
+      "kind": "historical-design",
+      "original_sha256": "43eb5dda5f3245a6babddcd184c6d9db389553a2e24cd3a15f884e2d4357e098",
+      "published_sha256": "2e89528f2d3bc04c662c75f905ea93cf9d14d4c9f6c2c782320fc01f0048c5ca",
+      "sanitized": true
+    },
+    {
+      "path": "review/claude-r3.md",
+      "kind": "historical-design",
+      "original_sha256": "cd8515c664f6bef693ff10178efd73b07b0773d72036461e21ad01cfc5b8bc56",
+      "published_sha256": "5bb4760cd54cee644b1feda32f67f2e494d366b0f3da2edc0aeb723081fb12a6",
+      "sanitized": true
+    },
+    {
+      "path": "review/claude-r4.md",
+      "kind": "historical-design",
+      "original_sha256": "03fb1e678ceab8f9a582d0ca887731f057126a5e2c78e800a7e066f83daf310a",
+      "published_sha256": "eed182377c3716234cf564a964c27251bf91da43e03bf791f06d8cf8a77e3f05",
+      "sanitized": true
+    },
+    {
+      "path": "review/claude-r5.md",
+      "kind": "historical-design",
+      "original_sha256": "27f67e486604765bb6f235d5992a1d7744fa11dfbeda96874647a76ec607f05d",
+      "published_sha256": "5acaaf9b2e92392db3f4f3e76863144e26495c65cd9d6cb84da9834eaea51c1b",
+      "sanitized": true
+    },
+    {
+      "path": "review/claude-review.md",
+      "kind": "historical-design",
+      "original_sha256": "dd01a2af6553921043f617cab5bbb02c2a0622f605e4dc031e5aa20f0fcae94d",
+      "published_sha256": "2b77aaa349bba18ad224d9a8556e7213a5230c69524340fcc7f712dc99e18de5",
+      "sanitized": true
+    },
+    {
+      "path": "review/claude-simple-cache-converged.md",
+      "kind": "historical-design",
+      "original_sha256": "208f8227ba153f7fba2c17ab2e54c9864da6fec88739fd5eb441df55198507cb",
+      "published_sha256": "f1133758ab261a0f4760ba6a559e00dbc85f46ab018d0fcdce85703f0d59cdae",
+      "sanitized": true
+    },
+    {
+      "path": "review/claude-simple-cache.md",
+      "kind": "historical-design",
+      "original_sha256": "28a2bca87bbf75a1b83d7dee682b8bbc0bfaf52cff00505c1d47bed07a4f2f47",
+      "published_sha256": "63e6f7528def0f3b47dcbd62e0d44b2d980f2a2fd8f255028e0bdaf14ed09a9d",
+      "sanitized": true
+    },
+    {
+      "path": "review/gpt-r3.md",
+      "kind": "historical-design",
+      "original_sha256": "867928c650662f51232344c61ee925e1a00d47972967380a55b58d2573d3c27c",
+      "published_sha256": "29c5d10c25e1a6bbb8cdf7feec67e23801310ca7a64ae8cea270155f9c1448f2",
+      "sanitized": true
+    },
+    {
+      "path": "review/gpt-r4.md",
+      "kind": "historical-design",
+      "original_sha256": "08006742fa2d0423b78c6b3dd2869f0b272b9077e3fcabc245c5c67255521d58",
+      "published_sha256": "821f91cb9564c30a6bd2c7b0c4300816e32b49fc99c090d3b3da7a496a312c53",
+      "sanitized": true
+    },
+    {
+      "path": "review/gpt-r5.md",
+      "kind": "historical-design",
+      "original_sha256": "04bc044233a1b1b9ecb3feb8a71a61ba161ff14b443715e37c996523a931ff5e",
+      "published_sha256": "806b19bb548187334138b4c7133c72e2b720fb144e9d5eab6147439ced0884c8",
+      "sanitized": true
+    },
+    {
+      "path": "review/gpt-review-brief.md",
+      "kind": "historical-design",
+      "original_sha256": "6c23bb80d6c9faec3fa96648ec4a3288016ed859dbb20bf7cb501a0516cfbc82",
+      "published_sha256": "841291076cd9f4f7baf494bfc10e027b05c7cd5c04a02e7f79fbc1b7d7b5ab55",
+      "sanitized": true
+    },
+    {
+      "path": "review/gpt-review.md",
+      "kind": "historical-design",
+      "original_sha256": "44f9db41f65c620f872a881ec0c3f88a83de2abffbefa1286ebc1f3348cf5ae5",
+      "published_sha256": "93994cc5bb80fb18ca345f9197d1d68b8d69110698ead7d63395ba8127bbe34f",
+      "sanitized": true
+    },
+    {
+      "path": "review/r3-brief.md",
+      "kind": "historical-design",
+      "original_sha256": "0e39237536619440fe6c1226ce4f1f20a74f5e341c93909c97a0f60f75c96a9a",
+      "published_sha256": "2d1f86ca5d319a625c8eba914734330c9120b35f9963de4121db8b108fa760df",
+      "sanitized": true
+    },
+    {
+      "path": "review/r4-brief.md",
+      "kind": "historical-design",
+      "original_sha256": "d732b5b349114879495a2c2a2c2897efc92a7b605ff75d67c841eb710050ef15",
+      "published_sha256": "fdf634c061f26bac155141e93e985211b8a088c4691ed7b329e488b3cd606995",
+      "sanitized": true
+    },
+    {
+      "path": "review/r5-brief.md",
+      "kind": "historical-design",
+      "original_sha256": "522420212082112b86bd5652e01a2f1a4a40940e8fc0cab9f1bb3ca3d49eab6c",
+      "published_sha256": "43f0f048858b80650de3b44ed588e6829ddc07b92dd3b46909d0765b0f37cfb5",
+      "sanitized": true
+    },
+    {
+      "path": "review/review-brief.md",
+      "kind": "historical-design",
+      "original_sha256": "b025d6b258f47d571303116668fc770b4c3f59cfc811236495a7fcddb2737217",
+      "published_sha256": "a7dc2738066d17c35fd77e744cb19910df7ec592011abea3623278c07b92b961",
+      "sanitized": true
+    },
+    {
+      "path": "review/simple-cache-architect-brief.md",
+      "kind": "historical-design",
+      "original_sha256": "7438755c22092b6ceb40757d4fc15e4fb91fa75f56e967aa96cd57dc031fae4b",
+      "published_sha256": "c101e57a6eb9431461337c64d218a37bb1bd486724a492b16b7e695b7f80659f",
+      "sanitized": true
+    },
+    {
+      "path": "review/simple-cache-convergence-brief.md",
+      "kind": "historical-design",
+      "original_sha256": "e813633aebc97f5f7857983e48775e9ff83caded11da4a45d61a6d9d27a3b220",
+      "published_sha256": "d122b8941a1ed2595327af13c38211a9fa07eedf3d35c7a2a6d84435de4d78a5",
+      "sanitized": true
+    },
+    {
+      "path": "revision-r1.md",
+      "kind": "historical-design",
+      "original_sha256": "49f3a3ab2664581426eb84facc16180e6c9dcd72d008ca9ed5b4100bad01a3a0",
+      "published_sha256": "b0a626d04a2d0eae6297c6049e7293d53b6a52be7cbc0222feb93fe4187719f9",
+      "sanitized": true
+    },
+    {
+      "path": "revision-r2.md",
+      "kind": "historical-design",
+      "original_sha256": "1afe90e120d2ce2c1336ad838fcc080e312063d870d7aa36bc27b300470e971c",
+      "published_sha256": "609c6f2d874b04475f5466d25ef96f79f790ec145b7c8039a5c387aa317220e3",
+      "sanitized": true
+    },
+    {
+      "path": "revision-r3.md",
+      "kind": "historical-design",
+      "original_sha256": "9988b0fa3d25265aa4f772a772bed0f7abce827f5ec2f77019c169dfc182d320",
+      "published_sha256": "42eea07b8aedec5513b97420f1c7eab21ab05dfdf4d2eee990d9f1b2f4bc6ad5",
+      "sanitized": true
+    },
+    {
+      "path": "revision-r4.md",
+      "kind": "historical-design",
+      "original_sha256": "43eb5dda5f3245a6babddcd184c6d9db389553a2e24cd3a15f884e2d4357e098",
+      "published_sha256": "789f016c0460d3d50121071eb5ab7010d8c31d0bdd823d837cd4906ae6ea2071",
+      "sanitized": true
+    },
+    {
+      "path": "gate_a.py",
+      "kind": "historical-diagnostic",
+      "original_sha256": "746277baa17ae126450c515697f6ce517284552c272785275edc0a5f22e400bc",
+      "published_sha256": "0a8f1ac63ee4992bda2a2b8373216d7888f9d20eec7754e7bfbf9c1bd5183bd0",
+      "sanitized": true
+    },
+    {
+      "path": "gate_a2.py",
+      "kind": "historical-diagnostic",
+      "original_sha256": "7613f4bdcc27880545855035f8f71c2a45f88dc55682a63e57b65197abf48177",
+      "published_sha256": "ff516233e791c190d1731c38e3ca5cf0bbafb75e3e4932c756d1db3319c33cb8",
+      "sanitized": true
+    },
+    {
+      "path": "s3_latency_probe.py",
+      "kind": "historical-diagnostic",
+      "original_sha256": "70f420f10dbd221f78acb9cc60c7d15adc272ef5b38b0e8684d0c9a43b945a60",
+      "published_sha256": "0e7cd2f7a5fdfc43e5b2af0c68ff840b78790d4353ac3fbc37300b198bb5e2f4",
+      "sanitized": true
+    },
+    {
+      "path": "s3_latency_probe_v2.py",
+      "kind": "historical-diagnostic",
+      "original_sha256": "5bdbde751c1e0470ae811d6e7a1e361db1bb54967af960f1a57263476130eb3d",
+      "published_sha256": "44b92034cd57668fb6264fb148f95dd8373cc21ae2ff38fc42d48b9eb11cf121",
+      "sanitized": true
+    },
+    {
+      "path": "s3_latency_probe_v3.py",
+      "kind": "historical-diagnostic",
+      "original_sha256": "70f420f10dbd221f78acb9cc60c7d15adc272ef5b38b0e8684d0c9a43b945a60",
+      "published_sha256": "0e7cd2f7a5fdfc43e5b2af0c68ff840b78790d4353ac3fbc37300b198bb5e2f4",
+      "sanitized": true
+    },
+    {
+      "path": "harness/analyze.py",
+      "kind": "historical-diagnostic",
+      "original_sha256": "902d780e0af8c93a07fa17250893c70939a87b67430de0eb45a36f44a75f5864",
+      "published_sha256": "12f943d1b73a778d03c6d167fe005d7ec3defae24c90782372e22bd580300179",
+      "sanitized": true
+    },
+    {
+      "path": "harness/otel-collector.yaml",
+      "kind": "historical-diagnostic",
+      "original_sha256": "70df350e4cd601a30f7dac251e60004998675e5c14122a7e900725d5966fbdfd",
+      "published_sha256": "f3c72123b051cb6884b58e23e74e2f46c4027c435518917639572459ffa07170",
+      "sanitized": true
+    }
+  ]
+}
