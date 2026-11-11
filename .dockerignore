@@ -1,0 +1,13 @@
+.git
+.upstream
+agents
+artifacts
+bin
+docs/history
+tests
+verification
+*.db
+*.db-shm
+*.db-wal
+.env
+__pycache__/

@@ -1,0 +1,82 @@
+name: Build & Publish Image
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+    branches: [main]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }} # ghcr.io/snoby-demo-org/dagger-remote-cache-engine
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build:
+    runs-on: k8s-runner
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GHCR
+        if: github.event_name != 'pull_request'
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=ref,event=branch
+            type=ref,event=pr
+            type=semver,pattern={{version}}
+            type=sha
+            # Flux image automation consumes this numeric tag pattern
+            # (ImagePolicy filterTags '^flux-(?P<n>[0-9]+)$').
+            type=raw,value=flux-${{ github.run_number }}
+
+      # Registry cache is main/tags-only: PR builds have no GHCR login, so they
+      # build with the GHA cache only and never poison the shared :main cache.
+      # The docker build stage clones the pinned Dagger tree, so a warm registry
+      # cache is what keeps CI under a few minutes.
+      - name: Set cache refs
+        id: cacherefs
+        run: |
+          {
+            echo "from<<EOF"
+            echo "type=gha"
+            if [ "$GITHUB_EVENT_NAME" != "pull_request" ]; then
+              echo "type=registry,ref=ghcr.io/$GITHUB_REPOSITORY-cache:main"
+            fi
+            echo "EOF"
+            echo "to<<EOF"
+            echo "type=gha,mode=max"
+            if [ "$GITHUB_EVENT_NAME" != "pull_request" ]; then
+              echo "type=registry,ref=ghcr.io/$GITHUB_REPOSITORY-cache:main,mode=max"
+            fi
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Dockerfile
+          platforms: linux/amd64
+          push: ${{ github.event_name != 'pull_request' }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+          cache-from: ${{ steps.cacherefs.outputs.from }}
+          cache-to: ${{ steps.cacherefs.outputs.to }}
