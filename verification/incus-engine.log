@@ -1,0 +1,7 @@
+[2026-11-11T12:32:24.705513Z] STAGE A: PASS out='cache-result-shared' counter=1 elapsed=1.52s
+[2026-11-11T12:32:31.044389Z] STAGE B: PASS out='cache-result-shared' counter=1 elapsed=0.16s
+[2026-11-11T12:32:31.168282Z] STAGE C: PASS out='cache-result-shared' counter=1 elapsed=0.12s
+[2026-11-11T12:32:38.153897Z] STAGE D: PASS out='cache-result-shared' counter=1 elapsed=0.15s
+[2026-11-11T12:32:43.537474Z] STAGE S3-delete: PASS deleted 5 keys, remaining=0
+[2026-11-11T12:32:45.328426Z] STAGE S3-fallback: PASS out='cache-result-shared' counter=2 elapsed=1.40s
+[2026-11-11T12:32:53.084063Z] STAGE S3-corrupt-fallback: PASS out='cache-result-shared' counter=3 elapsed=1.51s
